@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGB-MOD/LPSD/MBT3/2013-01 — Challenger 3 Main Battle Tank Programme</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+--army:#1a2a0d;
+--army-mid:#2e4a1a;
+--army-light:#4a6e28;
+--green-muted:#5a7a35;
+--green-pale:#8fab68;
+--rule:#b0bfaa;
+--rule-light:#d6dfe0;
+--bg:#f4f6f2;
+--bg-white:#ffffff;
+--bg-section:#eef1eb;
+--text-primary:#1a2a0d;
+--text-body:#1e2d1e;
+--text-muted:#4a5a3b;
+--text-label:#6a7f5a;
+--red-flag:#8b1a1a;
+}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+body{
+font-family:'IBM Plex Sans',sans-serif;
+background:var(--bg);
+color:var(--text-body);
+font-size:9.5pt;
+line-height:1.55;
+}
+.page{
+width:210mm;
+min-height:297mm;
+margin:0 auto 6mm auto;
+background:var(--bg-white);
+border:1px solid var(--rule);
+position:relative;
+overflow:hidden;
+}
+.page-inner{
+padding:20mm 22mm 18mm 22mm;
+}
+.cover-page .page-inner{
+padding:18mm 22mm 16mm 22mm;
+display:flex;
+flex-direction:column;
+min-height:297mm;
+}
+.header-band{
+background:var(--army);
+height:6px;
+width:100%;
+position:absolute;
+top:0;left:0;right:0;
+}
+.footer-band{
+background:var(--army);
+height:3px;
+width:100%;
+position:absolute;
+bottom:0;left:0;right:0;
+}
+.cover-top-row{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+margin-top:10mm;
+padding-bottom:8mm;
+border-bottom:1.5px solid var(--army);
+}
+.org-block{}
+.org-block .org-line1{
+font-size:11pt;
+font-weight:700;
+color:var(--army);
+letter-spacing:0.04em;
+text-transform:uppercase;
+}
+.org-block .org-line2{
+font-size:9.5pt;
+font-weight:600;
+color:var(--army-mid);
+letter-spacing:0.02em;
+text-transform:uppercase;
+margin-top:1mm;
+}
+.org-block .org-line3{
+font-size:8.5pt;
+font-weight:400;
+color:var(--text-muted);
+letter-spacing:0.01em;
+margin-top:0.5mm;
+}
+.crest-box{
+width:28mm;
+height:28mm;
+border:1.5px solid var(--army);
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+flex-shrink:0;
+}
+.crest-inner{
+width:18mm;
+height:18mm;
+}
+.crest-inner svg{width:100%;height:100%;}
+.classification-block{
+text-align:right;
+}
+.classification-block .cls-label{
+font-size:11pt;
+font-weight:700;
+color:var(--red-flag);
+letter-spacing:0.12em;
+text-transform:uppercase;
+border:1.5px solid var(--red-flag);
+display:inline-block;
+padding:1.5mm 4mm;
+}
+.classification-block .cls-ref{
+font-size:8pt;
+color:var(--text-muted);
+margin-top:2mm;
+font-family:'IBM Plex Mono',monospace;
+}
+.classification-block .cls-date{
+font-size:8pt;
+color:var(--text-muted);
+margin-top:1mm;
+font-family:'IBM Plex Mono',monospace;
+}
+.cover-main{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:14mm 0 10mm 0;
+}
+.programme-label{
+font-size:7.5pt;
+font-weight:600;
+color:var(--green-muted);
+letter-spacing:0.18em;
+text-transform:uppercase;
+margin-bottom:4mm;
+}
+.programme-title{
+font-size:22pt;
+font-weight:700;
+color:var(--army);
+letter-spacing:0.05em;
+text-transform:uppercase;
+text-align:center;
+line-height:1.18;
+border-top:2px solid var(--army);
+border-bottom:2px solid var(--army);
+padding:4mm 0;
+width:100%;
+}
+.programme-subtitle{
+font-size:10.5pt;
+font-weight:400;
+color:var(--army-mid);
+letter-spacing:0.04em;
+text-transform:uppercase;
+text-align:center;
+margin-top:4mm;
+}
+.cover-silhouette{
+margin:8mm 0 3mm 0;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.cover-silhouette svg{
+width:160mm;
+height:36mm;
+}
+.cover-silhouette img{
+width:160mm;
+height:56mm;
+object-fit:cover;
+object-position:center;
+border:1.5px solid var(--army);
+filter:grayscale(100%) contrast(1.05);
+}
+.cover-bottom{
+margin-top:auto;
+padding-top:6mm;
+border-top:1px solid var(--rule);
+display:flex;
+justify-content:space-between;
+align-items:flex-end;
+}
+.cover-bottom-meta{
+font-size:7.5pt;
+color:var(--text-muted);
+line-height:1.7;
+font-family:'IBM Plex Mono',monospace;
+}
+.cover-bottom-right{
+font-size:7.5pt;
+color:var(--text-muted);
+text-align:right;
+line-height:1.7;
+font-family:'IBM Plex Mono',monospace;
+}
+.doc-page-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-bottom:3mm;
+border-bottom:1px solid var(--rule);
+margin-bottom:5mm;
+font-size:7.5pt;
+font-family:'IBM Plex Mono',monospace;
+color:var(--text-muted);
+}
+.hdr-ref{color:var(--text-muted);}
+.hdr-title{font-weight:600;color:var(--army);}
+.hdr-cls{color:var(--red-flag);font-weight:600;}
+.section-title{
+font-size:11pt;
+font-weight:700;
+color:var(--army);
+letter-spacing:0.04em;
+text-transform:uppercase;
+margin:5mm 0 3mm 0;
+padding-bottom:2mm;
+border-bottom:1.5px solid var(--army);
+}
+.sub-title{
+font-size:9.5pt;
+font-weight:600;
+color:var(--army-mid);
+letter-spacing:0.02em;
+margin:4mm 0 2mm 0;
+}
+.body-text{
+font-size:9pt;
+color:var(--text-body);
+margin:0 0 2.5mm 0;
+}
+.note-box{
+background:var(--bg-section);
+border-left:3px solid var(--army-mid);
+padding:3mm 4mm;
+margin:3mm 0;
+font-size:8.5pt;
+color:var(--text-body);
+}
+.spec-table{
+width:100%;
+border-collapse:collapse;
+margin:2mm 0 3mm 0;
+font-size:8.5pt;
+}
+.spec-table th{
+background:var(--army);
+color:#fff;
+font-size:7.5pt;
+font-weight:600;
+letter-spacing:0.08em;
+text-transform:uppercase;
+padding:2mm 3mm;
+border:1px solid var(--rule);
+text-align:left;
+}
+.spec-table td{
+border:1px solid var(--rule);
+padding:2mm 3mm;
+vertical-align:top;
+}
+.label-col{
+font-weight:600;
+color:var(--army-mid);
+background:var(--bg-section);
+width:38%;
+font-size:8pt;
+}
+.value-col{
+color:var(--text-body);
+}
+.loadout-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:3mm;
+margin:3mm 0;
+}
+.loadout-cell{
+border:1px solid var(--rule);
+padding:3mm;
+background:var(--bg-section);
+}
+.lc-label{
+font-size:7.5pt;
+font-weight:700;
+color:var(--army);
+letter-spacing:0.06em;
+text-transform:uppercase;
+margin-bottom:1mm;
+}
+.lc-val{
+font-size:10pt;
+font-weight:700;
+color:var(--army-mid);
+font-family:'IBM Plex Mono',monospace;
+}
+.lc-desc{
+font-size:7.5pt;
+color:var(--text-muted);
+margin-top:1mm;
+}
+.doc-footer{
+display:flex;
+justify-content:space-between;
+font-size:7pt;
+color:var(--text-muted);
+font-family:'IBM Plex Mono',monospace;
+border-top:1px solid var(--rule-light);
+padding-top:2mm;
+margin-top:6mm;
+}
+.toc-entry{
+display:flex;
+gap:3mm;
+align-items:baseline;
+padding:1mm 0;
+border-bottom:1px dotted var(--rule-light);
+font-size:9pt;
+}
+.toc-num{
+font-family:'IBM Plex Mono',monospace;
+font-weight:600;
+color:var(--army-mid);
+width:8mm;
+flex-shrink:0;
+}
+.toc-name{flex:1;color:var(--text-body);}
+.toc-page{
+font-family:'IBM Plex Mono',monospace;
+color:var(--text-muted);
+width:10mm;
+text-align:right;
+}
+.roadmap-table{
+width:100%;
+border-collapse:collapse;
+font-size:8.5pt;
+margin:3mm 0;
+}
+.roadmap-table th{
+background:var(--army);
+color:#fff;
+font-size:7.5pt;
+font-weight:600;
+letter-spacing:0.08em;
+text-transform:uppercase;
+padding:2mm 3mm;
+border:1px solid var(--rule);
+text-align:left;
+}
+.roadmap-table td{
+border:1px solid var(--rule);
+padding:2mm 3mm;
+vertical-align:top;
+font-size:8pt;
+}
+.phase-col{
+font-weight:700;
+color:var(--army);
+background:var(--bg-section);
+width:18%;
+}
+.roadmap-table .mono{
+font-family:'IBM Plex Mono',monospace;
+font-size:7.5pt;
+color:var(--text-muted);
+}
+.amendment-table{
+width:100%;
+border-collapse:collapse;
+margin:2mm 0 4mm 0;
+}
+.amendment-table th{
+background:var(--army);
+color:#fff;
+font-size:7.5pt;
+font-weight:600;
+letter-spacing:0.08em;
+text-transform:uppercase;
+padding:2mm 3mm;
+border:1px solid var(--rule);
+}
+.amendment-table td{
+border:1px solid var(--rule);
+padding:2mm 3mm;
+font-size:8pt;
+font-family:'IBM Plex Mono',monospace;
+color:var(--text-muted);
+}
+.distribution-entry{
+font-size:8.5pt;
+padding:1mm 0;
+border-bottom:1px dotted var(--rule-light);
+display:flex;
+gap:6mm;
+}
+.distribution-entry .de-role{color:var(--text-body);flex:1;}
+.distribution-entry .de-copies{color:var(--text-muted);font-family:'IBM Plex Mono',monospace;width:12mm;text-align:right;}
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:6mm;
+margin:3mm 0 5mm 0;
+}
+.col-block{}
+.inline-mono{
+font-family:'IBM Plex Mono',monospace;
+font-size:8.5pt;
+color:var(--army-mid);
+}
+ul.body-list{
+margin:1mm 0 3mm 5mm;
+}
+ul.body-list li{
+font-size:9pt;
+color:var(--text-body);
+padding:0.5mm 0;
+}
+ul.body-list li::marker{color:var(--green-muted);}
+.classified-footer-strip{
+background:var(--red-flag);
+color:#fff;
+font-size:7pt;
+font-weight:700;
+letter-spacing:0.14em;
+text-transform:uppercase;
+text-align:center;
+padding:1.5mm 0;
+position:absolute;
+bottom:3px;
+left:0;right:0;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ COVER PAGE ═══════════════════════════════ -->
+<div class="page cover-page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="cover-top-row">
+<div style="display:flex;gap:5mm;align-items:flex-start;">
+<div class="crest-box">
+<div class="crest-inner">
+<!-- Army-style crest: crossed swords over shield -->
+<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="2" width="56" height="56" fill="none" stroke="#1a2a0d" stroke-width="2"/>
+<rect x="6" y="6" width="48" height="48" fill="none" stroke="#1a2a0d" stroke-width="0.8"/>
+<!-- Crossed swords -->
+<line x1="12" y1="12" x2="48" y2="48" stroke="#1a2a0d" stroke-width="2.2"/>
+<line x1="48" y1="12" x2="12" y2="48" stroke="#1a2a0d" stroke-width="2.2"/>
+<!-- Sword guards -->
+<line x1="20" y1="14" x2="14" y2="20" stroke="#1a2a0d" stroke-width="1.8"/>
+<line x1="46" y1="40" x2="40" y2="46" stroke="#1a2a0d" stroke-width="1.8"/>
+<line x1="40" y1="14" x2="46" y2="20" stroke="#1a2a0d" stroke-width="1.8"/>
+<line x1="14" y1="40" x2="20" y2="46" stroke="#1a2a0d" stroke-width="1.8"/>
+<!-- Centre star -->
+<circle cx="30" cy="30" r="4" fill="#1a2a0d"/>
+</svg>
+</div>
+</div>
+<div class="org-block">
+<div class="org-line1">Commonwealth of Great Britain</div>
+<div class="org-line2">Ministry of Defence</div>
+<div class="org-line3">Land Procurement &amp; Systems Directorate</div>
+</div>
+</div>
+<div class="classification-block">
+<div class="cls-label">Official — Sensitive</div>
+<div class="cls-ref">Ref: CGB-MOD/LPSD/MBT3/2013-01</div>
+<div class="cls-date">Date: 09 September 2013</div>
+<div class="cls-date">Issue: 1.0 &nbsp;|&nbsp; Status: DRAFT FOR REVIEW</div>
+</div>
+</div>
+
+<div class="cover-main">
+<div class="programme-label">Land Procurement &amp; Systems Directorate — Armoured Fighting Vehicle Programme</div>
+<div class="programme-title">Challenger 3 Main Battle Tank Programme</div>
+<div class="programme-subtitle">Future Armoured Manoeuvre &amp; Deep Fires Platform</div>
+<div style="margin-top:8mm;width:100%;border-top:1px solid var(--rule-light);border-bottom:1px solid var(--rule-light);padding:4mm 0;display:flex;justify-content:space-around;">
+<div style="text-align:center;">
+<div style="font-size:7pt;letter-spacing:0.12em;color:var(--text-label);text-transform:uppercase;margin-bottom:1mm;">Document Class</div>
+<div style="font-size:8.5pt;font-weight:600;color:var(--army);font-family:'IBM Plex Mono',monospace;">PROCUREMENT DOSSIER</div>
+</div>
+<div style="text-align:center;">
+<div style="font-size:7pt;letter-spacing:0.12em;color:var(--text-label);text-transform:uppercase;margin-bottom:1mm;">Programme Stage</div>
+<div style="font-size:8.5pt;font-weight:600;color:var(--army);font-family:'IBM Plex Mono',monospace;">INITIAL REQUIREMENTS</div>
+</div>
+<div style="text-align:center;">
+<div style="font-size:7pt;letter-spacing:0.12em;color:var(--text-label);text-transform:uppercase;margin-bottom:1mm;">Authorised By</div>
+<div style="font-size:8.5pt;font-weight:600;color:var(--army);font-family:'IBM Plex Mono',monospace;">DLSR/3 &amp; DEC(LV)</div>
+</div>
+<div style="text-align:center;">
+<div style="font-size:7pt;letter-spacing:0.12em;color:var(--text-label);text-transform:uppercase;margin-bottom:1mm;">Review Date</div>
+<div style="font-size:8.5pt;font-weight:600;color:var(--army);font-family:'IBM Plex Mono',monospace;">MARCH 2014</div>
+</div>
+</div>
+
+<!-- Real Challenger 3 reference image -->
+<div class="cover-silhouette">
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Challenger%203.jpg" alt="Challenger 3 main battle tank reference image">
+</div>
+
+<div style="font-size:7pt;color:var(--text-muted);text-align:center;letter-spacing:0.08em;font-family:'IBM Plex Mono',monospace;margin-top:1mm;">FIG. 0.1 — CHALLENGER 3 MAIN BATTLE TANK REFERENCE IMAGE (WIKIMEDIA COMMONS — OFFICIAL PROJECT HERMOD DISPLAY)</div>
+</div>
+
+<div class="cover-bottom">
+<div class="cover-bottom-meta">
+CGB-MOD/LPSD/MBT3/2013-01<br>
+© Commonwealth of Great Britain, Ministry of Defence, 2013<br>
+Not to be reproduced without written authority of LPSD
+</div>
+<div class="cover-bottom-right">
+OFFICIAL — SENSITIVE<br>
+Page 1 of [DRAFT]<br>
+Protective Marking: OS-LPSD
+</div>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ═══════════════════════════ DOCUMENT CONTROL ═══════════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Document Control</h1>
+
+<h2 class="sub-title">Amendment Record</h2>
+<table class="amendment-table">
+<tr><th>Issue</th><th>Date</th><th>Author</th><th>Approved By</th><th>Description of Change</th></tr>
+<tr><td>0.1</td><td>18 Apr 2013</td><td>C. Pemberton, DE&amp;S</td><td>—</td><td>Initial draft circulated internally for comment</td></tr>
+<tr><td>0.2</td><td>12 Jun 2013</td><td>C. Pemberton, DE&amp;S</td><td>—</td><td>Revised following Army Capabilities comments; platform mass and protection specs updated</td></tr>
+<tr><td>0.3</td><td>05 Aug 2013</td><td>R. Alderton, LPSD</td><td>—</td><td>Combat systems section expanded; propulsion and suspension data reconciled with DEC(LV) inputs</td></tr>
+<tr><td>1.0</td><td>09 Sep 2013</td><td>R. Alderton, LPSD</td><td>DLSR/3</td><td>Issue 1.0 — approved for distribution to Investment Approvals Board</td></tr>
+</table>
+
+<h2 class="sub-title">Distribution List</h2>
+<p class="body-text">This document is distributed in accordance with the protective marking OS-LPSD. Recipients are responsible for the appropriate storage and handling of this document and shall not reproduce or disclose its contents without the written authority of the Land Procurement &amp; Systems Directorate.</p>
+<div style="margin:3mm 0;">
+<div class="distribution-entry"><span class="de-role">Director, Land Systems Readiness (DLSR/3)</span><span class="de-copies">1 copy</span></div>
+<div class="distribution-entry"><span class="de-role">Director Equipment Capability (Land Vehicles) — DEC(LV)</span><span class="de-copies">1 copy</span></div>
+<div class="distribution-entry"><span class="de-role">Director Equipment Capability (Soldier Systems) — DEC(SS)</span><span class="de-copies">1 copy</span></div>
+<div class="distribution-entry"><span class="de-role">Deputy Chief of the General Staff — DCGS</span><span class="de-copies">1 copy</span></div>
+<div class="distribution-entry"><span class="de-role">Army Capabilities Directorate — ACD(ARM)</span><span class="de-copies">2 copies</span></div>
+<div class="distribution-entry"><span class="de-role">Investment Approvals Board Secretariat — IAB(S)</span><span class="de-copies">1 copy</span></div>
+<div class="distribution-entry"><span class="de-role">Defence Equipment &amp; Support — Armoured Vehicle Acquisition (DE&amp;S/AVA)</span><span class="de-copies">2 copies</span></div>
+<div class="distribution-entry"><span class="de-role">Chief Scientific Adviser (Army) — CSA(A)</span><span class="de-copies">1 copy</span></div>
+<div class="distribution-entry"><span class="de-role">LPSD Document Registry</span><span class="de-copies">1 copy</span></div>
+</div>
+
+<h2 class="sub-title">Table of Contents</h2>
+<div class="toc-entry"><span class="toc-num">1</span><span class="toc-name">Executive Summary</span><span class="toc-page">3</span></div>
+<div class="toc-entry"><span class="toc-num">2</span><span class="toc-name">Strategic Requirement</span><span class="toc-page">3</span></div>
+<div class="toc-entry"><span class="toc-num">3</span><span class="toc-name">Platform Overview</span><span class="toc-page">4</span></div>
+<div class="toc-entry"><span class="toc-num">4</span><span class="toc-name">Core Specifications</span><span class="toc-page">4</span></div>
+<div class="toc-entry"><span class="toc-num">5</span><span class="toc-name">Armament Systems</span><span class="toc-page">6</span></div>
+<div class="toc-entry"><span class="toc-num">6</span><span class="toc-name">Protection &amp; Survivability</span><span class="toc-page">7</span></div>
+<div class="toc-entry"><span class="toc-num">7</span><span class="toc-name">Sensors, Sighting &amp; Electronic Warfare</span><span class="toc-page">8</span></div>
+<div class="toc-entry"><span class="toc-num">8</span><span class="toc-name">Unmanned Systems &amp; Situational Awareness</span><span class="toc-page">9</span></div>
+<div class="toc-entry"><span class="toc-num">9</span><span class="toc-name">Digital &amp; Network Architecture</span><span class="toc-page">9</span></div>
+<div class="toc-entry"><span class="toc-num">10</span><span class="toc-name">Capability Roadmap</span><span class="toc-page">10</span></div>
+<div class="toc-entry"><span class="toc-num">A</span><span class="toc-name">Glossary of Terms and Abbreviations</span><span class="toc-page">11</span></div>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 2</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ═══════════════════════════ SECTIONS 1 & 2 ═══════════════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Section 1 — Executive Summary</h1>
+<p class="body-text">This document constitutes the Initial Procurement Dossier for the Challenger 3 Main Battle Tank Programme, produced by the Land Procurement &amp; Systems Directorate (LPSD) on behalf of the Commonwealth of Great Britain Ministry of Defence. The dossier sets out the identified capability requirement, proposed platform parameters, outline armament and protection configuration, and indicative acquisition timeline.</p>
+<p class="body-text">The Challenger 3 is intended to provide the Commonwealth Army with a next-generation main battle tank capability, addressing identified limitations in the current Challenger 2 fleet and providing decisive overmatch in direct-fire engagements across the full spectrum of peer and near-peer threat environments. The platform is designed to operate as the primary heavy manoeuvre asset within combined arms formation, capable of independent deep-fires operations and sustained high-intensity combat over extended operational periods.</p>
+<p class="body-text">Programme definition work is ongoing. This document is presented to the Investment Approvals Board as the basis for approval to proceed to the Platform Demonstrator phase. The figures and specifications contained herein reflect the current best estimate derived from Army Capabilities Directorate requirements, DE&amp;S preliminary analysis, and contractor engagement to date. All values are subject to revision as programme definition matures.</p>
+
+<div class="note-box">
+<strong>Note:</strong> This document does not constitute an approval to proceed with any contractual commitment. Expenditure authority remains subject to IAB determination and subsequent Treasury approval where applicable. The programme is subject to the HM Treasury Green Book appraisal framework.
+</div>
+
+<h1 class="section-title" style="margin-top:7mm;">Section 2 — Strategic Requirement</h1>
+
+<h2 class="sub-title">2.1 Identified Deficiencies in the Challenger 2 Fleet</h2>
+<p class="body-text">The Challenger 2, currently constituting the Commonwealth Army's primary main battle tank capability, remains a capable platform but is assessed as increasingly unable to guarantee overmatch against emerging peer and near-peer armoured threat systems. Analysis conducted by the Army Capabilities Directorate and DEC(LV) has identified the following specific deficiencies which the Challenger 3 programme is intended to address over the long-term planning horizon:</p>
+<p class="body-text"><strong>Firepower:</strong> The rifled 120 mm L30A1 gun remains effective against legacy threat vehicle classes but is assessed as insufficient against the protection standards of current and projected peer main battle tanks. The incompatibility of the L30A1 with NATO-standard 120 mm smoothbore ammunition constrains interoperability with allied partners and restricts the procurement base for advanced kinetic energy and programmable munition types.</p>
+<p class="body-text"><strong>Digital Integration:</strong> The Challenger 2 was designed without a fully integrated digital architecture. Battle management system integration has been delivered as successive incremental upgrades; the resultant architecture lacks the bandwidth, latency performance, and open-standards compliance required for full interoperability within the networked land battle space. Sensor fusion, fire control integration, and situational awareness data sharing are all assessed as sub-threshold relative to near-peer equivalents.</p>
+<p class="body-text"><strong>Sighting System:</strong> The gunner's primary sight and thermal imaging system, while upgraded on portions of the fleet, does not provide the generation-on-generation performance margin over threat vehicle fire control systems assessed as necessary to sustain first-round hit probability at threat engagement ranges. Commander's independent thermal sight provision is inconsistent across the fleet.</p>
+<p class="body-text"><strong>Active Protection:</strong> No organic active protection system is fitted to Challenger 2. The threat from man-portable anti-armour systems, top-attack munitions, and loitering anti-armour UAVs has increased substantially since the platform entered service. The absence of a layered protection system is assessed as a significant survivability risk in high-intensity combat against peer-level forces.</p>
+
+<h2 class="sub-title">2.2 Threat Environment Assessment</h2>
+<p class="body-text">The threat environment against which the Challenger 3 is required to operate is assessed across the following principal categories, in line with the current Land Threat Assessment produced by the Army Capabilities Directorate and revised in the 2012 Strategic Defence Review update:</p>
+<ul class="body-list">
+<li>Peer main battle tanks fitted with composite and reactive armour combinations, including fourth-generation explosive reactive armour systems and cage/slat protection</li>
+<li>Anti-armour guided weapons including top-attack capable variants and man-portable systems capable of engagement ranges in excess of 4,000 m</li>
+<li>Loitering munition systems with anti-armour warheads; threat trajectory profiles not reliably addressed by passive protection alone</li>
+<li>Thermobaric and bunker-defeat munitions relevant in complex and urban terrain environments</li>
+<li>Integrated anti-armour networks combining ground-based and airborne sensor cueing with precision-guided munition delivery</li>
+</ul>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 3</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ═══════════════════════════ SECTIONS 3 & 4 ════════════════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Section 3 — Platform Overview</h1>
+<p class="body-text">The Challenger 3 is a new-design main battle tank intended to replace the Challenger 2 as the Commonwealth Army's primary heavy armoured manoeuvre platform. The platform concept is founded on a new-generation composite armour hull and turret, fitted with a 120 mm smoothbore main armament, integrated active protection system, and a fully digital crew station architecture supporting battlefield network integration. The design draws upon contractor pre-qualification engagement and allied technology assessments conducted between 2011 and 2013.</p>
+<p class="body-text">The Challenger 3 is conceived as a platform-for-life, with the hull and turret structure sized and electrically provisioned to accommodate successive capability increments over a projected service life of not less than forty years. The design shall not commit to configurations that preclude future integration of directed energy active defence systems, next-generation sighting systems, or autonomous crew-assist functions anticipated within the out-years of the programme.</p>
+
+<h1 class="section-title" style="margin-top:6mm;">Section 4 — Core Specifications</h1>
+
+<h2 class="sub-title">4.1 Platform Dimensions and Mass</h2>
+<table class="spec-table">
+<tr><th colspan="2">Dimensions and Mass — Summary Parameters</th></tr>
+<tr><td class="label-col">Hull Length (gun forward)</td><td class="value-col">Approximately 11.5 m — 12.2 m; subject to detailed design</td></tr>
+<tr><td class="label-col">Hull Length (without gun)</td><td class="value-col">Approximately 8.3 m — 8.7 m; subject to turret design</td></tr>
+<tr><td class="label-col">Width (including skirts)</td><td class="value-col">Approximately 3.8 m — 4.0 m; subject to track and skirt configuration</td></tr>
+<tr><td class="label-col">Height (to turret roof, commander's sight excluded)</td><td class="value-col">Not to exceed 2.6 m; subject to turret design</td></tr>
+<tr><td class="label-col">Combat Mass (baseline)</td><td class="value-col">70 — 76 tonnes (estimated; inclusive of baseline armour package)</td></tr>
+<tr><td class="label-col">Combat Mass (with enhanced armour package)</td><td class="value-col">Not to exceed 82 tonnes; dependent on optional armour module configuration</td></tr>
+<tr><td class="label-col">Crew</td><td class="value-col">3 (Commander; Gunner; Driver) — autoloader configuration; no dedicated loader</td></tr>
+</table>
+
+<div class="note-box">
+<strong>Note on Mass Growth Margin:</strong> The design shall incorporate a mass growth margin of not less than 8% of baseline combat mass, held in reserve for through-life capability updates. No reduction to this margin shall be accepted during design development without formal approval of DEC(LV) and LPSD.
+</div>
+
+<h2 class="sub-title">4.2 Powerpack and Mobility</h2>
+<p class="body-text">The Challenger 3 powerpack is required to provide a substantial increase in power-to-weight ratio relative to the Challenger 2 Perkins CV12 installation, in order to support the increased combat mass of the new platform whilst delivering improved tactical mobility. The powerpack is to be a modular, front-removal unit to support field and base workshop maintenance without specialist tooling beyond that which can be deployed at echelon level.</p>
+<table class="spec-table">
+<tr><th colspan="2">Powerpack — Summary Parameters</th></tr>
+<tr><td class="label-col">Engine Type</td><td class="value-col">Multi-fuel diesel; turbocharged and intercooled; liquid-cooled</td></tr>
+<tr><td class="label-col">Power Output (nominal)</td><td class="value-col">Not less than 1,800 bhp (1,342 kW); up to 2,000 bhp subject to design evaluation</td></tr>
+<tr><td class="label-col">Power-to-Weight Ratio</td><td class="value-col">Not less than 24 bhp/tonne at baseline combat mass</td></tr>
+<tr><td class="label-col">Transmission</td><td class="value-col">Fully automatic; minimum 6 forward, 3 reverse; hydrostatic pivot steer capability</td></tr>
+<tr><td class="label-col">Suspension</td><td class="value-col">Hydropneumatic independent suspension; active ride height management capability</td></tr>
+<tr><td class="label-col">Fuel Type</td><td class="value-col">F-34 (AVTUR); multi-fuel capability to include diesel and JP-8</td></tr>
+<tr><td class="label-col">Fuel Capacity</td><td class="value-col">Not less than 1,600 litres internal; compatible with external tank provision</td></tr>
+<tr><td class="label-col">Electrical Generation</td><td class="value-col">Not less than 20 kW onboard generation at idle; 40 kW at operating power; reserve margin for directed energy and advanced electronic systems</td></tr>
+</table>
+
+<h2 class="sub-title">4.3 Performance Characteristics</h2>
+<table class="spec-table">
+<tr><td class="label-col">Maximum Road Speed</td><td class="value-col">70+ km/h (hard surface, level ground)</td></tr>
+<tr><td class="label-col">Cross-Country Speed</td><td class="value-col">40 — 50 km/h (representative cross-country terrain)</td></tr>
+<tr><td class="label-col">Operational Range (road)</td><td class="value-col">Not less than 550 km without refuelling</td></tr>
+<tr><td class="label-col">Gradient Climbing</td><td class="value-col">60% (33°); side slope 40%</td></tr>
+<tr><td class="label-col">Vertical Obstacle</td><td class="value-col">Not less than 1.2 m</td></tr>
+<tr><td class="label-col">Trench Crossing</td><td class="value-col">Not less than 3.0 m</td></tr>
+<tr><td class="label-col">Fording (unprepared)</td><td class="value-col">Not less than 1.2 m depth without preparation</td></tr>
+<tr><td class="label-col">Fording (with preparation)</td><td class="value-col">Not less than 2.0 m; deep fording provision to be assessed</td></tr>
+<tr><td class="label-col">Air Transportability</td><td class="value-col">Provision for C-17A strategic airlift at baseline mass; A400M compatibility assessed for reduced-mass configuration</td></tr>
+</table>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 4</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ═══════════════════════════ SECTION 5 — ARMAMENT ═══════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Section 5 — Armament Systems</h1>
+
+<h2 class="sub-title">5.1 Main Armament</h2>
+<p class="body-text">The Challenger 3 is to be fitted with a 120 mm smoothbore gun, replacing the rifled L30A1 of the Challenger 2 and providing full compatibility with NATO-standard 120 mm ammunition. This transition is required to support access to the full range of current and future kinetic energy penetrators, programmable and multi-effect munition types, and gun-launched guided projectiles available within the alliance procurement base. An autoloader is to be integrated to support a reduced three-man crew configuration.</p>
+<table class="spec-table">
+<tr><th colspan="2">Main Armament Configuration</th></tr>
+<tr><td class="label-col">Calibre</td><td class="value-col">120 mm smoothbore; NATO-standard chamber and breech interface</td></tr>
+<tr><td class="label-col">Gun System</td><td class="value-col">Subject to contractor competition; current planning compatible with Rheinmetall 120/L55A1 class or equivalent performance standard</td></tr>
+<tr><td class="label-col">Autoloader</td><td class="value-col">Integrated bustle-mounted autoloader; minimum rate of fire 10 rounds per minute in automatic mode</td></tr>
+<tr><td class="label-col">Ready Rounds (autoloader)</td><td class="value-col">Not less than 22 rounds in ready carousel</td></tr>
+<tr><td class="label-col">Total Ammunition Stowage</td><td class="value-col">Not less than 40 rounds (ready and stowed combined)</td></tr>
+<tr><td class="label-col">Ammunition Types (planned)</td><td class="value-col">Kinetic Energy (APFSDS); High Explosive Anti-Tank (HEAT); High Explosive Multi-Purpose (HEMP); Programmable Air-Burst (PAB); Gun-Launched Guided Projectile (provision)</td></tr>
+<tr><td class="label-col">Muzzle Velocity (KE)</td><td class="value-col">Not less than 1,750 m/s (long-rod penetrator projectile)</td></tr>
+<tr><td class="label-col">Effective Engagement Range</td><td class="value-col">Not less than 3,500 m against a stationary threat vehicle; 3,000 m against a moving target at 20 km/h cross</td></tr>
+</table>
+
+<h2 class="sub-title">5.2 Secondary Armament</h2>
+<table class="spec-table">
+<tr><td class="label-col">Coaxial Machine Gun</td><td class="value-col">1 × 7.62 mm general purpose machine gun, coaxially mounted; 5,000 rounds ready stowage</td></tr>
+<tr><td class="label-col">Commander's Weapon Station</td><td class="value-col">1 × remote-controlled weapon station (RCWS); 12.7 mm heavy machine gun or 40 mm grenade launcher; full 360° traverse; operable under armour</td></tr>
+<tr><td class="label-col">Smoke Grenade Dischargers</td><td class="value-col">2 × 6-barrel smoke grenade discharger banks (turret); multispectral smoke capability; integrated with active protection warning system for automatic deployment</td></tr>
+</table>
+
+<h2 class="sub-title">5.3 Anti-Tank Guided Weapon Provision</h2>
+<p class="body-text">The Challenger 3 design is to provide structural and electrical provisions for future integration of an external anti-tank guided weapon launcher, capable of engaging targets beyond direct gun range or at range under cover. No commitment to a specific ATGW system is made at this stage; the provisions are to be incorporated in the baseline design to avoid costly retrospective modification.</p>
+<table class="spec-table">
+<tr><td class="label-col">Provision Type</td><td class="value-col">Structural hardpoints and power/data interfaces on turret roof; specific launcher system subject to future programme authority</td></tr>
+<tr><td class="label-col">Intended Role</td><td class="value-col">Engagement of targets masked from direct gun line; overmatch at extended range; potential ground-to-air anti-drone role in future variants</td></tr>
+<tr><td class="label-col">Integration Timeline</td><td class="value-col">Increment 2 capability; not required at Initial Operating Capability</td></tr>
+</table>
+
+<h2 class="sub-title">5.4 Ammunition Management</h2>
+<p class="body-text">The autoloader carousel and stowed ammunition bays are designed with ballistic separation from the crew compartment in accordance with requirements for blast and fire containment following ammunition compartment penetration. Blow-off panels are fitted to the bustle to direct overpressure away from the crew.</p>
+<div class="loadout-grid">
+<div class="loadout-cell"><div class="lc-label">Kinetic Energy (Anti-Armour)</div><div class="lc-val">20 × APFSDS</div><div class="lc-desc">Primary round for engagement of armoured vehicles; long-rod tungsten penetrator; primary fill of autoloader carousel</div></div>
+<div class="loadout-cell"><div class="lc-label">Multi-Effect (Anti-Structure / Personnel)</div><div class="lc-val">10 × HEMP / HESH</div><div class="lc-desc">Engagement of light vehicles, bunkers, and personnel in defilade; retained for urban and close-combat tasks</div></div>
+<div class="loadout-cell"><div class="lc-label">Programmable Air-Burst</div><div class="lc-val">6 × PAB</div><div class="lc-desc">Engagement of personnel in defilade and low-flying UAV threats; fuze set via gun interface prior to firing</div></div>
+<div class="loadout-cell"><div class="lc-label">Reserve / Mission-Dependent</div><div class="lc-val">4 × Crew Choice</div><div class="lc-desc">Mission-configured rounds allocated by crew or formation commander prior to deployment</div></div>
+</div>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 5</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ═══════════════════════ SECTION 6 — PROTECTION ═══════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Section 6 — Protection &amp; Survivability</h1>
+
+<h2 class="sub-title">6.1 Passive Armour</h2>
+<p class="body-text">The Challenger 3 hull and turret are to be constructed around a new-generation composite armour matrix, incorporating ceramic, steel, and polymer interlayers designed to provide protection against the full range of current and projected KE and HEAT threat types assessed against the platform class. The armour configuration is modular, with the primary armour layer supplemented by appliqué armour panels which can be fitted or removed to adjust the protection level against mission-specific threat profiles.</p>
+<table class="spec-table">
+<tr><th colspan="2">Passive Armour Configuration</th></tr>
+<tr><td class="label-col">Hull Armour — Front</td><td class="value-col">New-generation composite matrix; specific protection level classified; not to be less than the NATO STANAG 4569 maximum assessed threat level applicable to MBT class</td></tr>
+<tr><td class="label-col">Turret Armour — Front</td><td class="value-col">New-generation modular composite; front arc to resist current-generation long-rod penetrators at all expected engagement ranges; specific protection level classified</td></tr>
+<tr><td class="label-col">Turret Armour — Sides</td><td class="value-col">Composite and spaced armour arrangement; enhanced side protection package available as appliqué fit</td></tr>
+<tr><td class="label-col">Hull Floor</td><td class="value-col">V-shaped blast deflection floor integrated into hull structure; mine blast protection to STANAG 4569 Level 4 minimum</td></tr>
+<tr><td class="label-col">Appliqué Panels</td><td class="value-col">Modular explosive reactive armour (ERA) or high-hardness steel panels; crew-fittable at formation level; specific system subject to selection</td></tr>
+<tr><td class="label-col">Cage / Slat Armour</td><td class="value-col">Structural provision for rear and side cage armour mount; standard fit in high-threat ATGW environments</td></tr>
+</table>
+
+<h2 class="sub-title">6.2 Active Protection System</h2>
+<p class="body-text">An integrated active protection system (APS) is a baseline requirement for the Challenger 3. The APS is required to provide a layered defeat capability against anti-armour guided weapons and unguided rocket threats approaching from all angles, operating in conjunction with the passive armour system. The APS is to be fully integrated with the vehicle's battle management system and provide threat cueing data to the crew and to formation situational awareness networks.</p>
+<table class="spec-table">
+<tr><td class="label-col">System Type</td><td class="value-col">Hard-kill and soft-kill combined; specific system subject to contractor competition and selection</td></tr>
+<tr><td class="label-col">Hard-Kill</td><td class="value-col">Radar-directed intercept projectile system; threat detection, tracking, and kinetic defeat within defined close-range envelope; specific system subject to selection</td></tr>
+<tr><td class="label-col">Soft-Kill</td><td class="value-col">Laser warning receiver (LWR) integrated with automated smoke grenade deployment; multispectral countermeasures; active jamming provision for future increment</td></tr>
+<tr><td class="label-col">Threat Detection Coverage</td><td class="value-col">Full 360° azimuth; elevation coverage appropriate to expected threat trajectories including top-attack</td></tr>
+<tr><td class="label-col">Integration with BMS</td><td class="value-col">APS threat detections to be logged and broadcast via vehicle BMS to formation net; fratricide avoidance logic required</td></tr>
+<tr><td class="label-col">Directed Energy (Future)</td><td class="value-col">Structural, power, and cooling provisions to be incorporated in the baseline design to support future integration of laser-based close-in defence; no commitment to specific system at this stage</td></tr>
+</table>
+<div class="note-box">
+<strong>Active Protection — Fratricide Avoidance:</strong> The APS hard-kill system shall incorporate a fratricide avoidance capability to suppress engagement when the system detects friendly personnel or vehicles within the intercept zone. This requirement shall be validated as part of the acceptance trial programme. The system shall also support a manual override mode for crew control in complex environments.
+</div>
+
+<h2 class="sub-title">6.3 NBC and Crew Survivability</h2>
+<table class="spec-table">
+<tr><td class="label-col">NBC Protection</td><td class="value-col">Collective protection system with overpressure; individual crew integration with S10 respirator or successor; CBRN sensor integration</td></tr>
+<tr><td class="label-col">Fire Suppression</td><td class="value-col">Automatic fire detection and suppression in crew, engine, and ammunition compartments; halon-compatible or equivalent suppression agent</td></tr>
+<tr><td class="label-col">Crew Extraction</td><td class="value-col">Emergency hatches for all crew positions; driver's hatch operable from disabled position</td></tr>
+<tr><td class="label-col">Signature Management</td><td class="value-col">Thermal signature reduction measures on hull and exhaust; multispectral camouflage paint system compatible; radar cross-section reduction provisions in turret design</td></tr>
+</table>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 6</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ═══════════════ SECTIONS 7 & 8 — SENSORS, EW, UAS ══════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Section 7 — Sensors, Sighting &amp; Electronic Warfare</h1>
+
+<h2 class="sub-title">7.1 Gunner's Primary Sight</h2>
+<p class="body-text">The Challenger 3 is to be fitted with a next-generation dual-axis stabilised gunner's primary sight (GPS) incorporating third-generation thermal imaging, day optical channel, and laser rangefinder. The sight must deliver a first-round hit probability sufficient to achieve overmatch against the current generation of peer MBT fire control systems at engagement ranges up to 3,500 m in all meteorological conditions.</p>
+<table class="spec-table">
+<tr><td class="label-col">Thermal Imager</td><td class="value-col">Third-generation uncooled or cooled focal plane array; minimum 640×480 pixel resolution; dual-FOV; subject to system evaluation</td></tr>
+<tr><td class="label-col">Day Optical Channel</td><td class="value-col">Stabilised day channel; minimum ×10 magnification; digital image enhancement</td></tr>
+<tr><td class="label-col">Laser Rangefinder</td><td class="value-col">Nd:YAG or equivalent; range not less than 10,000 m; multiple-return capability</td></tr>
+<tr><td class="label-col">Target Acquisition</td><td class="value-col">Automatic target tracking (ATT) function; integration with fire control computer for ballistic solution</td></tr>
+<tr><td class="label-col">Stabilisation</td><td class="value-col">Dual-axis gyrostabilised; gun and sight to remain on target during vehicle cross-country movement</td></tr>
+</table>
+
+<h2 class="sub-title">7.2 Commander's Independent Sight</h2>
+<p class="body-text">The commander is to be provided with a fully independent stabilised thermal imaging and day sight, permitting hunter-killer engagement sequences without interruption of the gunner's engagement cycle. The commander's sight is to be fully integrated with the fire control system, enabling the commander to designate and hand off targets to the gunner while the gunner continues an ongoing engagement.</p>
+<table class="spec-table">
+<tr><td class="label-col">Sight Type</td><td class="value-col">Independent panoramic sight; thermal and day channels; full 360° traverse independent of turret</td></tr>
+<tr><td class="label-col">Hunter-Killer Capability</td><td class="value-col">Commander to designate next target during gunner's engagement; automatic turret slew to commander's designation on command</td></tr>
+<tr><td class="label-col">Integration</td><td class="value-col">Fully integrated with BMS and situational awareness display; target location data computed and transmitted automatically</td></tr>
+</table>
+
+<h2 class="sub-title">7.3 Electronic Warfare Suite</h2>
+<p class="body-text">The Challenger 3 is to be fitted with a vehicle-level electronic warfare package providing awareness, warning, and soft-kill countermeasure functions. The suite is to be expandable through the platform life in line with the evolving electromagnetic threat environment.</p>
+<table class="spec-table">
+<tr><td class="label-col">Laser Warning Receiver (LWR)</td><td class="value-col">Full sphere coverage; detects laser rangefinder, designator, and beam-rider threats; automatic countermeasure cueing</td></tr>
+<tr><td class="label-col">Radar Warning Receiver (RWR)</td><td class="value-col">Passive intercept of active radar emissions; threat library identification; provides cueing for APS soft-kill response</td></tr>
+<tr><td class="label-col">Electronic Countermeasures (ECM)</td><td class="value-col">Provision for vehicle-mounted ECM jammer for radio-controlled IED defeat and communications jamming; specific system subject to programme authority</td></tr>
+<tr><td class="label-col">Multispectral Smoke</td><td class="value-col">Smoke grenade dischargers generating visual, near-IR, and thermal screening simultaneously; integrated with LWR for automatic deployment</td></tr>
+</table>
+
+<h1 class="section-title" style="margin-top:6mm;">Section 8 — Unmanned Systems &amp; Situational Awareness</h1>
+
+<h2 class="sub-title">8.1 Unmanned Ground Vehicle Interface</h2>
+<p class="body-text">The Challenger 3 is to incorporate a software and communications architecture supporting the direction and control of associated unmanned ground vehicle (UGV) systems operating as organic platform adjuncts. At IOC, this interface is required to support receipt of sensor feeds from platoon-level UGV reconnaissance systems and direct control of remote-weapon UGV variants under crew supervision.</p>
+<table class="spec-table">
+<tr><td class="label-col">UGV Categories</td><td class="value-col">Reconnaissance; remote weapon; route clearance (provision); specific systems under separate programme definition</td></tr>
+<tr><td class="label-col">Data Link</td><td class="value-col">Integrated with vehicle BMS; real-time sensor feed and mission management from within armoured station</td></tr>
+<tr><td class="label-col">Number of UGV Concurrent Control</td><td class="value-col">Not less than 2 simultaneously at IOC; 4 as future capability increment</td></tr>
+</table>
+
+<h2 class="sub-title">8.2 Counter-UAS Provision</h2>
+<p class="body-text">The increasing threat posed by loitering munitions and reconnaissance UAVs against armoured vehicles requires the Challenger 3 to incorporate provision for future integration of a vehicle-organic counter-UAS capability. This provision encompasses structural hardpoints, electrical interfaces, and software architecture necessary to accommodate counter-UAS effectors and sensor systems as they mature.</p>
+<table class="spec-table">
+<tr><td class="label-col">Provision Type</td><td class="value-col">Hardpoints and power/data interfaces on turret roof and hull; integration with APS radar cueing network</td></tr>
+<tr><td class="label-col">Intended Effectors (Future)</td><td class="value-col">Directed energy (laser); kinetic interceptors via APS hard-kill expansion; jamming via EW suite expansion</td></tr>
+<tr><td class="label-col">Integration Timeline</td><td class="value-col">Increment 2 capability; provisions required at baseline to avoid retrospective modification</td></tr>
+</table>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 7</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ════════════════════════ SECTION 9 — DIGITAL ════════════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Section 9 — Digital &amp; Network Architecture</h1>
+
+<h2 class="sub-title">9.1 Battle Management System</h2>
+<p class="body-text">The Challenger 3 is designed around an integrated battle management system (BMS) which provides the central processing and display function for all sensor, weapon, navigation, and communications data within the platform. The BMS is intended to replace the aggregated crew-station-by-station displays of legacy vehicles with a unified fusion-centred architecture providing each crew member with a relevant common operating picture.</p>
+<ul class="body-list">
+<li>Full sensor fusion capability: real-time integration of gunner's sight, commander's sight, APS radar, LWR, and RWR inputs into a single crew-accessible recognised ground picture</li>
+<li>Cooperative engagement capability: integration with formation and brigade BMS networks, allowing the platform to receive and display contact data from adjacent vehicles, dismounted troops, and higher formation headquarters</li>
+<li>Secure multi-domain data links: provision for not less than two simultaneous secure tactical data links compliant with current and anticipated alliance standards (BOWMAN successor or equivalent)</li>
+<li>Blue force tracking: real-time broadcast and receipt of platform location and status within formation net; fratricide risk reduction</li>
+<li>Open systems architecture: the BMS architecture is required to conform to open standards to facilitate through-life capability updates and reduce dependence on single-source support</li>
+</ul>
+
+<h2 class="sub-title">9.2 Crew Displays and Human-Machine Interface</h2>
+<table class="spec-table">
+<tr><td class="label-col">Driver's Display</td><td class="value-col">Multifunction display; terrain and obstacle alerts; vehicle health monitoring; BMS situational awareness overlay</td></tr>
+<tr><td class="label-col">Gunner's Display</td><td class="value-col">Integrated fire control and sight display; ammunition management; APS status; BMS contact overlay</td></tr>
+<tr><td class="label-col">Commander's Display</td><td class="value-col">Primary BMS display; all-station data access; UGV control interface; voice and data communications management; separate from commander's sight optic</td></tr>
+<tr><td class="label-col">Voice Communications</td><td class="value-col">Integrated crew intercom and formation radio; minimum 2 simultaneous external nets; encrypted</td></tr>
+</table>
+
+<h2 class="sub-title">9.3 Cybersecurity</h2>
+<p class="body-text">The digital architecture of the Challenger 3 is to be designed and accredited in accordance with the CGB-MOD Cyber Security requirements applicable to military vehicle systems operating in a contested electromagnetic environment. The vehicle is to be resistant to electronic intrusion via radio interfaces, maintenance ports, and external data feeds.</p>
+
+<div class="note-box">
+<strong>Network Integration Note:</strong> The Challenger 3 BMS is required to be compatible with the Commonwealth Army's current formation BMS and with its projected successor system anticipated within the platform's service life. Compatibility shall not be sacrificed for performance optimisation within the vehicle-specific system. Inter-system interface standards are to be agreed with Army Digital Transformation Directorate prior to detailed design freeze.
+</div>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 8</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+<!-- ════════════════════════ SECTION 10 — ROADMAP ═══════════════════════════ -->
+<div class="page">
+<div class="header-band"></div>
+<div class="page-inner">
+<div class="doc-page-header">
+<span class="hdr-ref">CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0</span>
+<span class="hdr-title">Challenger 3 Main Battle Tank Programme</span>
+<span class="hdr-cls">Official — Sensitive</span>
+</div>
+
+<h1 class="section-title">Section 10 — Capability Roadmap</h1>
+<p class="body-text">The following programme phases are proposed for the Challenger 3 programme. The programme is treated as having commenced in 2011 under the Armoured Manoeuvre Renewal workstream, with an accelerated intended in-service target of early 2017. Dates and durations remain indicative and are subject to revision as a result of procurement decisions, contractor engagement, and changes in the departmental financial settlement. All phase transitions are subject to investment approval at the appropriate decision gate, in accordance with the CGB-MOD Acquisition Management System.</p>
+
+<table class="roadmap-table">
+<tr>
+<th>Phase</th>
+<th>Indicative Period</th>
+<th>Key Activities</th>
+<th>Decision Gate / Authority</th>
+</tr>
+<tr>
+<td class="phase-col">Phase 0<br>Requirements Definition</td>
+<td class="mono">2011 — 2013</td>
+<td>Finalisation of User Requirement Document (URD) and System Requirement Document (SRD) under Armoured Manoeuvre Renewal authority. Contractor pre-qualification, market engagement, threat assessment update, and completion of initial concept studies for autoloader configuration, APS selection, and digital architecture.</td>
+<td>Initial Gate (IG) — Investment Approvals Board. Treasury approval for project initiation.</td>
+</tr>
+<tr>
+<td class="phase-col">Phase 1<br>Platform Demonstrator</td>
+<td class="mono">2013 — 2014</td>
+<td>Turret and hull form demonstrator construction; gun, autoloader, and fire control integration trials on static rig; APS assessment trials; BMS architecture definition. Design authority selection and preliminary design review to be completed. Active protection system competitive evaluation to commence.</td>
+<td>Demonstration Phase Review — LPSD and DEC(LV). Continuation authority DG Land / DES.</td>
+</tr>
+<tr>
+<td class="phase-col">Phase 2<br>Prototype Construction</td>
+<td class="mono">2014 — 2016</td>
+<td>Detailed design, long-lead component procurement, hull construction and turret integration. System installation, static firing trials, ballistic trials of passive armour, and APS live-fire validation. BMS integration and formation network compatibility testing to overlap with construction phase.</td>
+<td>Main Gate (MG) — Secretary of State approval required. Full Business Case submission to IAB and Treasury.</td>
+</tr>
+<tr>
+<td class="phase-col">Phase 3<br>Trials and Acceptance</td>
+<td class="mono">2016 — Q1 2017</td>
+<td>Contractor mobility and automotive trials; Commonwealth Army acceptance trials; full-system fire control proving; APS operational evaluation including fratricide avoidance; NBC and crew survivability validation. Directed energy provisions to be structurally validated; full operational installation deferred to Increment 2.</td>
+<td>Acceptance Board — CGB-MOD / DE&amp;S / Army representative. Defect management and warranty baseline established.</td>
+</tr>
+<tr>
+<td class="phase-col">Phase 4<br>Initial Operating Capability</td>
+<td class="mono">Target: Early 2017</td>
+<td>Accelerated introduction into Commonwealth Army service. Crew and maintenance training pipeline established in parallel with acceptance activity; operational evaluation; formation of Challenger 3 conversion training facility; declaration of IOC against agreed criteria, and first operational deployment within the early-2017 planning window.</td>
+<td>IOC Declaration — Deputy Chief of the General Staff. Subject to achievement of agreed capability criteria.</td>
+</tr>
+<tr>
+<td class="phase-col">Phase 5<br>Full Operating Capability &amp; Future Increments</td>
+<td class="mono">2017 onwards</td>
+<td>FOC declaration following accelerated initial batch delivery and crew pipeline establishment. Future capability increments including directed energy APS integration, gun-launched guided projectile qualification, ATGW external launcher integration, and BMS successor compatibility to be defined in post-IOC programme phases.</td>
+<td>FOC Declaration and future increment approvals subject to individual programme authorities.</td>
+</tr>
+</table>
+
+<div class="note-box" style="margin-top:5mm;">
+<strong>Programme Risk Note:</strong> The 2013–2018 programme timeline is assessed as high risk in respect of concurrent APS system maturation, autoloader integration, and BMS architecture development. The Platform Demonstrator phase is intended to reduce technical risk prior to Main Gate commitment. The programme review at Demonstration Phase Review is required to confirm that technology readiness levels have been achieved before progression to Phase 2 is approved.
+</div>
+
+<h1 class="section-title" style="margin-top:6mm;">Annex A — Glossary of Terms and Abbreviations</h1>
+
+<div class="two-col" style="margin-top:3mm;">
+<div class="col-block">
+<table class="spec-table" style="font-size:8pt;">
+<tr><td class="label-col" style="width:30%;">ACD(ARM)</td><td>Army Capabilities Directorate (Armour)</td></tr>
+<tr><td class="label-col">APFSDS</td><td>Armour-Piercing Fin-Stabilised Discarding Sabot</td></tr>
+<tr><td class="label-col">APS</td><td>Active Protection System</td></tr>
+<tr><td class="label-col">ATGW</td><td>Anti-Tank Guided Weapon</td></tr>
+<tr><td class="label-col">BMS</td><td>Battle Management System</td></tr>
+<tr><td class="label-col">CBRN</td><td>Chemical, Biological, Radiological, Nuclear</td></tr>
+<tr><td class="label-col">CGB-MOD</td><td>Commonwealth of Great Britain Ministry of Defence</td></tr>
+<tr><td class="label-col">CSA(A)</td><td>Chief Scientific Adviser (Army)</td></tr>
+<tr><td class="label-col">DCGS</td><td>Deputy Chief of the General Staff</td></tr>
+<tr><td class="label-col">DE&amp;S</td><td>Defence Equipment &amp; Support</td></tr>
+<tr><td class="label-col">DEC(LV)</td><td>Director Equipment Capability (Land Vehicles)</td></tr>
+<tr><td class="label-col">DEC(SS)</td><td>Director Equipment Capability (Soldier Systems)</td></tr>
+<tr><td class="label-col">DLSR/3</td><td>Director, Land Systems Readiness</td></tr>
+<tr><td class="label-col">ECM</td><td>Electronic Countermeasures</td></tr>
+<tr><td class="label-col">ERA</td><td>Explosive Reactive Armour</td></tr>
+<tr><td class="label-col">EW</td><td>Electronic Warfare</td></tr>
+</table>
+</div>
+<div class="col-block">
+<table class="spec-table" style="font-size:8pt;">
+<tr><td class="label-col" style="width:30%;">FOC</td><td>Full Operating Capability</td></tr>
+<tr><td class="label-col">GPS</td><td>Gunner's Primary Sight</td></tr>
+<tr><td class="label-col">HEAT</td><td>High Explosive Anti-Tank</td></tr>
+<tr><td class="label-col">HEMP</td><td>High Explosive Multi-Purpose</td></tr>
+<tr><td class="label-col">IAB</td><td>Investment Approvals Board</td></tr>
+<tr><td class="label-col">IED</td><td>Improvised Explosive Device</td></tr>
+<tr><td class="label-col">IG</td><td>Initial Gate (acquisition decision point)</td></tr>
+<tr><td class="label-col">IOC</td><td>Initial Operating Capability</td></tr>
+<tr><td class="label-col">KE</td><td>Kinetic Energy</td></tr>
+<tr><td class="label-col">LPSD</td><td>Land Procurement &amp; Systems Directorate</td></tr>
+<tr><td class="label-col">LWR</td><td>Laser Warning Receiver</td></tr>
+<tr><td class="label-col">MBT</td><td>Main Battle Tank</td></tr>
+<tr><td class="label-col">MG</td><td>Main Gate (acquisition decision point)</td></tr>
+<tr><td class="label-col">NBC</td><td>Nuclear, Biological, Chemical</td></tr>
+<tr><td class="label-col">PAB</td><td>Programmable Air-Burst</td></tr>
+<tr><td class="label-col">RCWS</td><td>Remote-Controlled Weapon Station</td></tr>
+<tr><td class="label-col">RWR</td><td>Radar Warning Receiver</td></tr>
+<tr><td class="label-col">UGV</td><td>Unmanned Ground Vehicle</td></tr>
+<tr><td class="label-col">URD</td><td>User Requirement Document</td></tr>
+</table>
+</div>
+</div>
+
+<div class="note-box" style="margin-top:6mm;">
+<strong>End of Document — CGB-MOD/LPSD/MBT3/2013-01 Issue 1.0</strong><br>
+This document contains information exempt from disclosure under the provisions of the Commonwealth Freedom of Information Act 2000. It is to be handled in accordance with the protective marking OS-LPSD and is not to be reproduced or disclosed without the written authority of the Land Procurement &amp; Systems Directorate.
+</div>
+
+<div class="doc-footer">
+<span>CGB-MOD/LPSD/MBT3/2013-01 — Iss.1.0 — 09 September 2013</span>
+<span>Official — Sensitive</span>
+<span>Page 9 — End of Document</span>
+</div>
+</div>
+<div class="classified-footer-strip">Official — Sensitive — CGB-MOD/LPSD/MBT3/2013-01</div>
+</div>
+
+</body>
+</html>
